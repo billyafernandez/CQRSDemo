@@ -1,0 +1,19 @@
+<md-toolbar color="primary" [style.position]="'fixed'" [style.top]="'0'" [style.left]="'0'" [style.right]="'0'" [style.z-index]="'1'">
+    <span>{{title}}</span>
+    <span [style.flex] = "'1 1 auto'"></span>
+    
+    <md-checkbox [(ngModel)]="autoRefreshEnabled" [style.margin-right]="'20px'">
+      Auto Refresh
+    </md-checkbox>    
+    
+    <button md-raised-button color="primary" (click)="refresh()" [disabled]="autoRefreshEnabled && autoRefreshEnabled.checked">REFRESH</button>
+</md-toolbar>
+
+<md-grid-list cols="6" [style.background]="'rgba(0, 0, 0, 0.14)'" [style.margin-top]="'150px'" gutterSize="16px">
+  <md-grid-tile *ngFor="let tile of tiles">
+    <a [href]="tile.url" target="_blank">
+      <img [src]="tile.url" style="width:100%;height:100%;border:solid 2px #757692;"/>
+    </a>
+  </md-grid-tile>
+</md-grid-list>
+
