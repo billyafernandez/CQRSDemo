@@ -3,8 +3,9 @@
 ## App Overview
 
 <center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/11IEfYo8BRE?rel=0" frameborder="0" allowfullscreen></iframe>
+[![CQRS Demo](https://i.ytimg.com/vi/11IEfYo8BRE/2.jpg?time=1465857215805)](https://www.youtube.com/watch?v=11IEfYo8BRE)
 </center>
+
 
 ## Backend
 
