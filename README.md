@@ -1,10 +1,9 @@
 # CQRS Demo
 
-## App Overview
+## App Video Overview
 
-<center>
-[![CQRS Demo](https://i.ytimg.com/vi/11IEfYo8BRE/2.jpg?time=1465857215805)](https://www.youtube.com/watch?v=11IEfYo8BRE)
-</center>
+
+[![CQRS Demo](https://i.ytimg.com/vi/11IEfYo8BRE/maxresdefault.jpg?time=1465857215805)](https://www.youtube.com/watch?v=11IEfYo8BRE)
 
 
 ## Backend
