@@ -43,3 +43,28 @@ npm install
  ```bash
  ng serve
   ```
+
+### Follow the query process in the code:
+
+#### Queries:
+* Web API: request
+https://github.com/billyafernandez/CQRSDemo/blob/master/BackEnd/CQRS.Demo.Web.API/Controllers/TwitterController.cs#L28
+* Web API: return query
+https://github.com/billyafernandez/CQRSDemo/blob/master/BackEnd/CQRS.Demo.Web.API/Application/TweetsService.cs#L42
+
+#### Command:
+
+* Web API: request
+https://github.com/billyafernandez/CQRSDemo/blob/master/BackEnd/CQRS.Demo.Web.API/Controllers/TwitterController.cs#L28
+* Web API: send command request
+https://github.com/billyafernandez/CQRSDemo/blob/master/BackEnd/CQRS.Demo.Web.API/Application/TweetsService.cs#L28
+* Command Stack Domain: command Event
+https://github.com/billyafernandez/CQRSDemo/blob/master/BackEnd/CQRS.Demo.CommandStack.Domain/Model/Events/TweetRequestCreatedEvent.cs#L11
+* Command Stack Domain: raise uncommited command events
+https://github.com/billyafernandez/CQRSDemo/blob/master/BackEnd/CQRS.Demo.CommandStack.Domain/Common/Aggregate.cs#L41
+* Infrastucture Persistence: save comand info to database
+https://github.com/billyafernandez/CQRSDemo/blob/master/BackEnd/CQRS.Demo.Infrastructure.Persistence.SqlServer/Repositories/TweetRepository.cs#L42
+* Command Stack: raise created command event
+https://github.com/billyafernandez/CQRSDemo/blob/master/BackEnd/CQRS.Demo.CommandStack/Sagas/TweetSaga.cs#L41
+* Infrastucture Persistence: event store (creates a log of events)
+https://github.com/billyafernandez/CQRSDemo/blob/master/BackEnd/CQRS.Demo.Infrastructure.EventStore.SqlServer/Repositories/EventRepository.cs#L16
