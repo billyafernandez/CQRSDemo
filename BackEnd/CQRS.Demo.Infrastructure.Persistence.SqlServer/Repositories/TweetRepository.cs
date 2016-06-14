@@ -34,11 +34,11 @@ namespace CQRS.Demo.Infrastructure.Persistence.SqlServer.Repositories
 
             if (tweetExists == null)
             {
-                _cqrsDemoEntities.images.Add(tweet); //.Set<T>().Add(booking);
+                _cqrsDemoEntities.images.Add(tweet);
                 count = _cqrsDemoEntities.SaveChanges();
             }
 
-            var response = new CommandResponse(count > 0, tweet.Id); // { RequestId = new Guid(booking.RequestId) };
+            var response = new CommandResponse(count > 0, tweet.Id);
             return response;
         }
     }
