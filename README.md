@@ -48,7 +48,7 @@ npm install
 
 #### Queries:
 * Web API: request
-https://github.com/billyafernandez/CQRSDemo/blob/master/BackEnd/CQRS.Demo.Web.API/Controllers/TwitterController.cs#L28
+https://github.com/billyafernandez/CQRSDemo/blob/master/BackEnd/CQRS.Demo.Web.API/Controllers/TwitterController.cs#L19
 * Web API: return query
 https://github.com/billyafernandez/CQRSDemo/blob/master/BackEnd/CQRS.Demo.Web.API/Application/TweetsService.cs#L42
 
