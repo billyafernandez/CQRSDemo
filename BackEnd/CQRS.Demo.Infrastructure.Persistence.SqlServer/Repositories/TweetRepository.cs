@@ -41,26 +41,5 @@ namespace CQRS.Demo.Infrastructure.Persistence.SqlServer.Repositories
             var response = new CommandResponse(count > 0, tweet.Id); // { RequestId = new Guid(booking.RequestId) };
             return response;
         }
-
-        //public CommandResponse Update(int bookingId, int hour, int length, string name)
-        //{
-        //    //var current = DateTime.Now;
-        //    //if (current.Second % 2 == 0)
-        //    //{
-        //    //    return CommandResponse.Fail;
-        //    //}
-
-        //    var booking = (from b in _merloEntities.Bookings where b.Id == bookingId select b).FirstOrDefault();
-        //    if (booking == null)
-        //        return CommandResponse.Fail;
-
-        //    booking.Id = bookingId;
-        //    booking.StartingAt = hour;
-        //    booking.Length = length;
-        //    booking.Name = name;
-        //    var count = _merloEntities.SaveChanges();
-        //    var response = new CommandResponse(count > 0, booking.Id);
-        //    return response;
-        //}
     }
 }
